@@ -10815,6 +10815,9 @@ Body:
       NoDamage: true
     Hit: Single
     HitCount: 1
+    AfterCastActDelay:
+      - Level: 1
+        Time: 500
     CastCancel: true
     CastTime: 2000
     Duration1: 600000

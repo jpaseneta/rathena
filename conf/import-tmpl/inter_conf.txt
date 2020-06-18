@@ -33,6 +33,6 @@ log_db_ip: 127.0.0.1
 log_db_port: 3306
 log_db_id: root
 log_db_pw: 5m@rtw@v3
-log_db_db: rathena
+log_db_db: logs
 log_codepage:
 log_login_db: loginlog

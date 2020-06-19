@@ -147,3 +147,7 @@ prt_in,28,73,4	script	Wise Old Woman#eAcustom	78,{
 		close;
 	}
 }
+
+// Duplicates
+//============================================================
+prontera,168,178,1	duplicate(Healer)	Wise Old Woman#eAcustomPrt	78

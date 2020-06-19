@@ -609,7 +609,7 @@ OnInstanceInit: // Temporary fix for @reloadscript.
 			cutin "ins_cata_champ_n",2;
 			switch(select("What is Essence of Fire?:What is a Token of Apostle?:What should I do?:I am ready.")) {
 			case 1:
-				set .@ins_baphomet_1f_1,.@ins_baphomet_1f_1+1;
+				set .@ins_baphomet_1f_1,1;
 				mes "[Ancient Hero's Soul]";
 				mes "You can see the torches here and there. These torches are the essence of Thor, the god of Thunder. They are inherited from our predecessors to stop the darkness of Baphomet...";
 				next;
@@ -624,7 +624,7 @@ OnInstanceInit: // Temporary fix for @reloadscript.
 				next;
 				break;
 			case 2:
-				set .@ins_baphomet_1f_2,.@ins_baphomet_1f_2+1;
+				set .@ins_baphomet_1f_2,1;
 				mes "[Ancient Hero's Soul]";
 				mes "At that time, it was impossible to get rid of Devil Baphomet by ourselves. After numerous heroes sacrificed their lives, we could barely seal him under this Abbey.";
 				next;
@@ -651,7 +651,7 @@ OnInstanceInit: // Temporary fix for @reloadscript.
 				next;
 				break;
 			case 3:
-				set .@ins_baphomet_1f_3,.@ins_baphomet_1f_3+1;
+				set .@ins_baphomet_1f_3,1;
 				if (is_party_leader(.@party_id) == true) {
 					mes "[Ancient Hero's Soul]";
 					mes "You look like the leader of this party. You need to go and get ^0000FF10 Essence of Fire^000000 from the torches.";

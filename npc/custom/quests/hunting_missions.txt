@@ -170,7 +170,7 @@ Mission_Status:
 	}
 
 	// Reward formulas:
-	.@Mission_Points = 3 + (.@j[.Quests] / .Quests / 6);
+	.@Mission_Points = 3 + (.@j[.Quests] / .Quests / 10);
 	.@Base_Exp = #Mission_Count * .@j[.Quests+1] / 5;
 	.@Job_Exp = #Mission_Count * .@j[.Quests+2] / 5;
 	.@Zeny = #Mission_Count * .Quests * .@j[.@i] * .Modifier[2];
@@ -308,10 +308,10 @@ OnNPCKillEvent:
 	end;
 
 OnInit:
-	.Delay = 12;            // Quest delay, in hours (0 to disable).
+	.Delay = 0;            // Quest delay, in hours (0 to disable).
 	.Quests = 4;            // Number of subquests per mission (increases rewards).
 	.Party = 3;             // Party options: 0 (exclude party kills), 1 (include party kills), 2 (same map only), 3 (screen area only)
-	.Reset = -1;            // Reset options: -1 (abandoning mission sets delay time), 0 (no delay time), [Zeny] (cost to abandon mission, no delay time)
+	.Reset = 100000;            // Reset options: -1 (abandoning mission sets delay time), 0 (no delay time), [Zeny] (cost to abandon mission, no delay time)
 	setarray .Count[0],     // Min and max monsters per subquest (increases rewards).
 		40,70;
 	setarray .Modifier[0],  // Multipliers for Base Exp, Job Exp, and Zeny rewards.
@@ -319,7 +319,7 @@ OnInit:
 	.mob_db$ =              // Table name of SQL mob database
 		(checkre(0))?"mob_db_re":"mob_db";
 	setarray .Shop[0],      // Reward items: <ID>,<point cost> (about 10~20 points per hunt).
-		512,1,513,1,514,1,538,5,539,5,558,10,561,10;
+		7227,1;
 	.Blacklist$ =           // Blacklisted mob IDs.
 		"1062,1088,1183,1186,1200,1212,1220,1221,1234,1235,"+
 		"1244,1245,1250,1268,1290,1293,1294,1296,1298,1299,"+

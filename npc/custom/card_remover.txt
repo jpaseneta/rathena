@@ -14,11 +14,11 @@
 //= 1.2a Added 'disable_items' command. [Euphy]
 //============================================================
 
-prt_in,28,73,4	script	Wise Old Woman#eAcustom	78,{
+-	script	Wise Old Woman	-1,{
 
 	set .zenycost,200000;    // base cost of the card remover services (in Zeny)
 	set .percardcost,25000;  // cost per card of the card remover services (in Zeny)
-	set .faildestroy,1;      // should the card remover have a chance of failure that destroys items? (1=yes, 0=no)
+	set .faildestroy,0;      // should the card remover have a chance of failure that destroys items? (1=yes, 0=no)
 
 	disable_items;
 	mes "[Wise Old Woman]";
@@ -150,4 +150,5 @@ prt_in,28,73,4	script	Wise Old Woman#eAcustom	78,{
 
 // Duplicates
 //============================================================
-prontera,168,178,1	duplicate(Healer)	Wise Old Woman#eAcustomPrt	78
+prt_in,28,73,4	duplicate(Wise Old Woman)	Wise Old Woman#eAcustomPrtIn	78
+prontera,168,178,1	duplicate(Wise Old Woman)	Wise Old Woman#eAcustomPrt	78

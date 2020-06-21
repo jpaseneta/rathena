@@ -18,7 +18,6 @@
 
 -	script	Warper	-1,{
 function Go; function Disp; function Pick; function Restrict;
-
 // --------------------------------------------------
 //	Main Menu:
 // --------------------------------------------------

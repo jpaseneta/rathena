@@ -3763,7 +3763,7 @@
 5571,Rasta_Wig,Rasta Wig,4,20,,100,,1,,0,0xFFFFFFFF,63,2,256,,0,1,552,{ bonus bStr,1; bonus3 bAutoSpellWhenHit,"BA_FROSTJOKER",1,50; },{},{}
 5572,Savage_Baby_Hat,Savage Babe Hat,4,20,,100,,1,,1,0xFFFFFFFF,63,2,256,,30,1,553,{ bonus bVit,2; bonus2 bAddEff,Eff_Stun,500; bonus2 bSubRace,RC_Brute,-10; },{},{}
 5573,Bogy_Horn,Dokebi Horn,4,20,,100,,1,,1,0xFFFFFFFF,63,2,256,,75,1,554,{ bonus2 bAddMonsterDropItemGroup,IG_Jewel,100; bonus3 bAutoSpell,"MC_MAMMONITE",5,70; },{},{}
-5574,Pencil_In_Mouth,Well-Chewed Pencil,4,20,,100,,0,,0,0xFFFFFFFF,63,2,1,,10,0,555,{ bonus bHit,3; },{},{}
+5574,Pencil_In_Mouth,Well-Chewed Pencil,4,20,,100,,0,,0,0xFFFFFFFF,63,2,1,,10,0,555,{ bonus bHit,3; bonus bDex,2; },{},{}
 5575,Onigiri_Hat,Rice Ball Hat,4,20,,100,,6,,1,0xFFFFFFFF,63,2,256,,30,0,556,{},{},{}
 5576,Japan_Winecup,Wine Cup,4,20,,100,,1,,0,0xFFFFFFFF,63,2,1,,0,0,557,{},{},{}
 5577,Dark_Knight_MaskB,Dark Knight Mask,4,,,3000,,5,,0,0xFFFFFFFF,63,2,769,,80,1,479,{ bonus bDex,3; },{},{}
@@ -5229,7 +5229,7 @@
 7224,Stone_Of_Intelligence,Stone of Sage,3,0,,10,,,,,,,,,,,,,{},{},{}
 7225,Pumpkin_Bucket,Pumpkin Lantern,3,486,,10,,,,,,,,,,,,,{},{},{}
 7226,Pill,Pellet,3,2,,10,,,,,,,,,,,,,{},{},{}
-7227,TCG_Card,TCG Card,3,0,,10,,,,,,,,,,,,,{},{},{}
+7227,Impulse_Trading_Card,Impulse Trading Card,3,0,,10,,,,,,,,,,,,,{},{},{}
 7228,Gold_Bullion,Gold Bullion,3,100000,,300,,,,,,,,,,,,,{},{},{}
 7229,Silver_Bullion,Silver Bullion,3,50000,,300,,,,,,,,,,,,,{},{},{}
 7230,White_Gold_Bullion,Platinum Bullion,3,200000,,300,,,,,,,,,,,,,{},{},{}
@@ -8168,9 +8168,9 @@
 13998,Giant_Fly_Wing_Box500,Giant Fly Wing 500 Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 12212,500; },{},{}
 13999,Pill__Box100,Pill 100 Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 14523,100; },{},{}
 14000,Pill__Box500,Pill 500 Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 14523,500; },{},{}
-14001,Basic_Siege_Supply_Box,Recruit Siege Supply Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getgroupitem(IG_Basic_Siege_Supply_Box); /*getitem 11503,25; getitem 11504,10;*/ },{},{}
-14002,Adv_Siege_Supply_Box,Veteran Siege Supply Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getgroupitem(IG_Adv_Siege_Supply_Box); /*getitem 11503,50; getitem 11504,20;*/ },{},{}
-14003,Elite_Siege_Supply_Box,Elite Siege Supply Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getgroupitem(IG_Elite_Siege_Supply_Box); /*getitem 11503,100; getitem 11504,50;*/ },{},{}
+14001,Basic_Siege_Supply_Box,Recruit Siege Supply Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getgroupitem(IG_Basic_Siege_Supply_Box); getitem 11503,25; getitem 11504,10; },{},{}
+14002,Adv_Siege_Supply_Box,Veteran Siege Supply Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getgroupitem(IG_Adv_Siege_Supply_Box); getitem 11503,50; getitem 11504,20; },{},{}
+14003,Elite_Siege_Supply_Box,Elite Siege Supply Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getgroupitem(IG_Elite_Siege_Supply_Box); getitem 11503,100; getitem 11504,50; },{},{}
 14004,Poison_Bottle_10_Box,Poison Bottle 10 Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 678,10; },{},{}
 14005,Poison_Bottle_5_Box,Poison Bottle 5 Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 678,5; },{},{}
 14006,F_Drooping_W_Kitty_Box,Evolved Drooping Cat Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 5372,1; },{},{}

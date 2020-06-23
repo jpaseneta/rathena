@@ -20,25 +20,37 @@
 
 // Information
 //============================================================ 
-prontera,164,173,4	script	Jaime Reyes	572,{
-	waitingroom "PVP Warper", 0;
+prontera,164,173,4	script	PvP Warper	651,{
+	mes "PVP Warper";
+	mes "Welcome!, Do you want to Enter";
+	mes "Inside the PVP Arena?";
+	next;
 	for (.@i = 0; .@i < .map_size; .@i++) 
 		.@menu$ = .@menu$ + .map_name$[.@i] + "("+getmapusers(.map$[.@i])+" user(s))" + ":";
 	.@i = select(.@menu$) - 1;
 	mapannounce .map$[.@i], strcharinfo(0)+ " has entered this PVP room.", bc_map;
 	warp .map$[.@i], 0, 0;
-	end;
+	end;	
+
 	
 	OnInit:
+		waitingroom "[PVP Warper]", 0;
 		setarray .map_name$,
-			"Enter!", 
-			"Go!", 
-			"Bobo";
+			"Enter PVP Room", 
+			"", 
+			"";
 		setarray .map$, 
-			"pvp_n_8-5", 
-			"pvp_n_8-5", 
-			"pvp_n_8-5";
+			"guild_vs3", 
+			"", 
+			"";
 		.map_size = getarraysize(.map_name$);
 		end;
 }
-	
+
+// Duplicates
+//============================================================
+morocc,154,101,4	duplicate(PVP)	PVP Warper#moc	651
+ 
+
+
+ 

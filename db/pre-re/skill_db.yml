@@ -7034,6 +7034,9 @@ Body:
     Range: 18
     Hit: Single
     HitCount: 1
+    AfterCastActDelay:
+      - Level: 1
+        Time: 400
     Requires:
       SpCost: 14
       SpiritSphereCost: 1

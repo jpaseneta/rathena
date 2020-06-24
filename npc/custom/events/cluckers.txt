@@ -19,48 +19,55 @@
 //= 1.3 Switched 'unitskilluseid' to 'unitkill'.
 //============================================================
 
-prontera,156,219,4	script	Cluckers	800,{
+prontera,160,146,4	script	Cluckers	800,{
 
 	set .@GMAccess,80;	// GM level required to access NPC
 
 	if (.startcluck) {
-		specialeffect2 EF_HIT3;
-		switch(rand(15)) {
-			case 0: npctalk "Cluckers : CLUUUUUUCK!!!"; unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; emotion ET_HUK; break;
-			case 1: npctalk "Cluckers : Cluuuuuck!~"; break;
-			case 2: unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; break;
-			case 3: sc_start SC_Freeze,10000,0; break;
-			case 4: npctalk "Cluckers : CLUUUUUUUUUCK!!!"; unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; emotion ET_HUK; break;
-			case 5: sc_start SC_Sleep,10000,0; break;
-			case 6: sc_start SC_Stone,10000,0; emotion ET_KIK; break;
-			case 7: npctalk "Cluckers : CLUUUUUUCK!!!"; unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; emotion ET_HUK; break;
-			case 8: npctalk "Cluckers : Cluck! CLUUUCK!!"; unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; emotion ET_HUK; break;
-			case 9: sc_start SC_Stun,10000,0; break;
-			case 10: sc_start SC_Sleep,10000,0; emotion ET_KIK; break;
-			case 11: npctalk "Cluckers : Cluck! Cluck!"; break;
-			case 12: sc_start SC_Stun,10000,0; break;
-			case 13: unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; break;
-			default:
-				if (rand(50) < 4) {
-					npctalk "Cluckers : WOOF!...........";
-					specialeffect2 EF_SPHERE;
-					announce "[Cluck! Cluck! Boom!] " + strcharinfo(0) + " squeezed out the prize! Well done!",0;
-					getitem $cluck_item_id,$cluck_item_amount;
-					set .startcluck,0;
-				} else {
-					npctalk "Cluckers : Cluck! CLUUUCK!!";
-					unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1;
-				}
-				break;
+		if (getgmlevel() >= .@GMAccess) {
+			goto OnGMTalked;
+		} else {
+			specialeffect2 EF_HIT3;
+			switch(rand(15)) {
+				case 0: npctalk "Cluckers : CLUUUUUUCK!!!"; unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; emotion ET_HUK; break;
+				case 1: npctalk "Cluckers : Cluuuuuck!~"; break;
+				case 2: unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; break;
+				case 3: sc_start SC_Freeze,10000,0; break;
+				case 4: npctalk "Cluckers : CLUUUUUUUUUCK!!!"; unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; emotion ET_HUK; break;
+				case 5: sc_start SC_Sleep,10000,0; break;
+				case 6: sc_start SC_Stone,10000,0; emotion ET_KIK; break;
+				case 7: npctalk "Cluckers : CLUUUUUUCK!!!"; unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; emotion ET_HUK; break;
+				case 8: npctalk "Cluckers : Cluck! CLUUUCK!!"; unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; emotion ET_HUK; break;
+				case 9: sc_start SC_Stun,10000,0; break;
+				case 10: sc_start SC_Sleep,10000,0; emotion ET_KIK; break;
+				case 11: npctalk "Cluckers : Cluck! Cluck!"; break;
+				case 12: sc_start SC_Stun,10000,0; break;
+				case 13: unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; break;
+				default:
+					if (rand(50) < 4) {
+						npctalk "Cluckers : WOOF!...........";
+						specialeffect2 EF_SPHERE;
+						announce "[Cluck! Cluck! Boom!] " + strcharinfo(0) + " squeezed out the prize! Well done!",0;
+						getitem $cluck_item_id,$cluck_item_amount;
+						set .startcluck,0;
+					} else {
+						npctalk "Cluckers : Cluck! CLUUUCK!!";
+						unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1;
+					}
+					break;
+			}
+			end;
 		}
-		end;
+	} else {
+		goto OnGMTalked;
 	}
+OnGMTalked:
 	mes "[Cluckers]";
 	if (getgmlevel() >= .@GMAccess) {
 		mes "Cluck cluck! Cluuuuuck? ^FF0000~Hi GM " + strcharinfo(0) + ", Wanna play today?~^000000";
 		mes "Cluck cluck... CLUCK! ^FF0000~Just tell me what to do!~^000000";
 		next;
-		while(1) switch(select("Start Event:Check Prize:Set Prize:Not today Cluckers")) {
+		while(1) switch(select("~Start Event:~Stop Event:~Check Prize:~Set Prize:Not today Cluckers")) {
 			case 1:
 				mes "[Cluckers]";
 				mes "CLUCK! ^FF0000~Sure thing!~^000000";
@@ -71,10 +78,16 @@ prontera,156,219,4	script	Cluckers	800,{
 				end;
 			case 2:
 				mes "[Cluckers]";
+				mes "CLUCK! ^FF0000~Sure thing!~^000000";
+				emotion ET_OK;
+				close2;
+				goto OnEnd;
+			case 3:
+				mes "[Cluckers]";
 				mes "Cluck, cluck cluck... Cluck! ^FF0000~The current prize is^000000 ^008000"+ $cluck_item_amount +" "+ getitemname($cluck_item_id) +".^000000";
 				next;
 				break;
-			case 3:
+			case 4:
 				mes "[Cluckers]";
 				mes "Cluck cluck? Cluck??? ^FF0000~What should the prize for winning be? Please input the ID.~^000000";
 				input $cluck_item_id;
@@ -88,7 +101,7 @@ prontera,156,219,4	script	Cluckers	800,{
 				emotion ET_OK;
 				next;
 				break;
-			case 4:
+			case 5:
 				mes "[Cluckers]";
 				mes "Cluck cluck cluck...";
 				close;
@@ -97,21 +110,33 @@ prontera,156,219,4	script	Cluckers	800,{
 	mes "Cluck cluck! Cluuuuuck?";
 	mes "Cluck....";
 	close;
+	end;
 
 OnTimer10000:
 	announce "Please hurry behind the fountain if you want to play with the crazy chicken!",bc_blue;
 	end;
 OnTimer20000:
-	announce "Cluckers has eaten one of my items! I'm too scared to retrieve it!",bc_blue;
+	announce "Cluckers has eaten one of my items! I'm too scared to retrieve it! type @event to join",bc_blue;
 	end;
 OnTimer30000:
-	announce "Click the insane chicken and try squeeze out the item, if you're lucky you'll win! Are you ready?",bc_blue;
+	announce "Click the insane chicken and try squeeze out the item, if you're lucky you'll win Impulse Trading Cards! Are you ready?",bc_blue;
 	end;
 OnTimer40000:
 	announce "GO! Click the chicken to get the prize!",bc_blue;
 	stopnpctimer;
-	if (!$cluck_item_id) set $cluck_item_id,512;
-	if (!$cluck_item_amount) set $cluck_item_amount,1;
+	if (!$cluck_item_id) set $cluck_item_id,7227;
+	if (!$cluck_item_amount) set $cluck_item_amount,20;
 	set .startcluck,1;
 	end;
+OnStart:
+	stopnpctimer;
+	set .startcluck,0;
+	announce "[Cluck! Cluck! Boom!] is about to start in Prontera! type @event to join!",bc_blue;
+	initnpctimer;
+	end;
+OnEnd:
+	announce "[Cluck! Cluck! Boom!] has ended!", bc_blue;
+	stopnpctimer;
+	set .startcluck,0;
+	
 }

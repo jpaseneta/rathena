@@ -1,0 +1,34 @@
+//===== rAthena Script =======================================
+//= Shop Street
+//===== By: ==================================================
+//= Masao
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= rAthena Project
+
+
+prontera,154,177,4	script	Freebies NPC	468,{
+OnInit:
+	waitingroom "Get your Freebies", 0;
+	end;
+
+OnPCLoginEvent:
+    if (!#Freebies) {
+        getitem2 20127,1,1,+0,0,0,0,0,0;
+        getitem2 20050,1,1,+0,0,0,0,0,0;
+        getitem2 20099,1,1,+0,0,0,0,0,0;
+        getitem2 7037,1,1,+0,0,0,0,0,0;
+        getitem2 671,1,1,+0,0,0,0,0,0;
+        getitem2 4142,1,1,+0,0,0,0,0,0;
+        getitem2 2375,1,1,+0,0,0,0,0,0;
+        getitem2 2433,1,1,+0,0,0,0,0,0;
+        getitem2 2537,1,1,+0,0,0,0,0,0;
+        getitem2 2729,1,1,+0,0,0,0,0,0;
+        getitem2 2374,1,1,+0,0,0,0,0,0;
+        announce "Welcome to Impulse Ragnarok Online, "+strcharinfo(0)+" !","0x33FF66";
+        set #Freebies, 1;
+    }
+    end;
+    
+}

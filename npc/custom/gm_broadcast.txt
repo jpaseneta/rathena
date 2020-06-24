@@ -1,0 +1,19 @@
+-	script	mapNPC	-1,{
+OnWhisperGlobal:
+	announce ""+@whispervar0$,bc_map;
+	end;
+}
+
+
+-	script	globalNPC	-1,{
+OnWhisperGlobal:
+	announce ""+@whispervar0$,bc_all;
+	end;
+}
+
+-	script	buffs	-1,{
+OnWhisperGlobal:
+	if (@whispervar0$ == "bless")
+		skilleffect 34,0; sc_start SC_BLESSING,360000,10;
+	end;
+}

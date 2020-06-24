@@ -20,17 +20,17 @@
 
 // Information
 //============================================================ 
-prontera,164,173,4	script	PvP Warper	651,{
+-	script	PVP Warper#1::pvpwarper	651,{
 	mes "PVP Warper";
 	mes "Welcome!, Do you want to Enter";
 	mes "Inside the PVP Arena?";
 	next;
 	for (.@i = 0; .@i < .map_size; .@i++) 
 		.@menu$ = .@menu$ + .map_name$[.@i] + "("+getmapusers(.map$[.@i])+" user(s))" + ":";
-	.@i = select(.@menu$) - 1;
-	mapannounce .map$[.@i], strcharinfo(0)+ " has entered this PVP room.", bc_map;
-	warp .map$[.@i], 0, 0;
-	end;	
+		.@i = select(.@menu$) - 1;
+		warp .map$[.@i], 0, 0;
+		mapannounce .map$[.@i], strcharinfo(0)+ " has entered this PVP room.", bc_all;
+	end;
 
 	
 	OnInit:
@@ -49,8 +49,30 @@ prontera,164,173,4	script	PvP Warper	651,{
 
 // Duplicates
 //============================================================
-morocc,154,101,4	duplicate(PVP)	PVP Warper#moc	651
- 
+morocc,154,101,4	duplicate(pvpwarper)	PVP Warper#moc	651
+prontera,165,173,4	duplicate(pvpwarper)	PVP Warper#prt	651
+geffen,115,67,4	duplicate(pvpwarper)	PVP Warper#gef	651
+payon,187,108,4	duplicate(pvpwarper)	PVP Warper#pay	651
+alberta,38,240,4	duplicate(pvpwarper)	PVP Warper#alberta	651
+izlude,128,150,4	duplicate(pvpwarper)	PVP Warper#izlude	651
+aldebaran,148,114,4	duplicate(pvpwarper)	PVP Warper#alde	651
+xmas,141,138,4	duplicate(pvpwarper)	PVP Warper#xmas	651
+comodo,198,156,4	duplicate(pvpwarper)	PVP Warper#comodo	651
+yuno,148,187,4	duplicate(pvpwarper)	PVP Warper#yuno	651
+amatsu,102,144,4	duplicate(pvpwarper)	PVP Warper#amatsu	651
+gonryun,154,127,4	duplicate(pvpwarper)	PVP Warper#gon	651
+umbala,97,160,4	duplicate(pvpwarper)	PVP Warper#umb	651
+niflheim,212,186,4	duplicate(pvpwarper)	PVP Warper#nif	651
+louyang,212,107,4	duplicate(pvpwarper)	PVP Warper#lou	651
+jawaii,242,135,4	duplicate(pvpwarper)	PVP Warper#jaw	651
+ayothaya,203,174,4	duplicate(pvpwarper)	PVP Warper#ayo	651
+einbroch,232,207,4	duplicate(pvpwarper)	PVP Warper#ein	651
+lighthalzen,153,106,4	duplicate(pvpwarper)	PVP Warper#light	651
+einbech,192,125,4	duplicate(pvpwarper)	PVP Warper#einb	651
+hugel,91,158,4	duplicate(pvpwarper)	PVP Warper#hug	651
+rachel,123,125,4	duplicate(pvpwarper)	PVP Warper#rac	651
+veins,224,129,4	duplicate(pvpwarper)	PVP Warper#veins	651
+moscovia,217,198,4	duplicate(pvpwarper)	PVP Warper#mosc	651
 
 
  

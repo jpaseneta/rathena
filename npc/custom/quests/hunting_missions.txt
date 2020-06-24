@@ -308,9 +308,10 @@ OnNPCKillEvent:
 	end;
 
 OnInit:
+	waitingroom "[Hunt ITC here]", 0;
 	.Delay = 0;            // Quest delay, in hours (0 to disable).
 	.Quests = 4;            // Number of subquests per mission (increases rewards).
-	.Party = 3;             // Party options: 0 (exclude party kills), 1 (include party kills), 2 (same map only), 3 (screen area only)
+	.Party = 1;             // Party options: 0 (exclude party kills), 1 (include party kills), 2 (same map only), 3 (screen area only)
 	.Reset = 100000;            // Reset options: -1 (abandoning mission sets delay time), 0 (no delay time), [Zeny] (cost to abandon mission, no delay time)
 	setarray .Count[0],     // Min and max monsters per subquest (increases rewards).
 		40,70;

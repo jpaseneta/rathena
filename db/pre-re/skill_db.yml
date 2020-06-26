@@ -13206,7 +13206,7 @@ Body:
         Count: 10
     CastCancel: true
     CastTime: 1000
-    AfterCastActDelay: 1000
+    AfterCastActDelay: 1500
     Requires:
       SpCost: 30
       ItemCost:

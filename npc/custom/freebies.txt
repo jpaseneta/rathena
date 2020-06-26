@@ -8,27 +8,36 @@
 //= rAthena Project
 
 
-prontera,154,177,4	script	Freebies NPC	468,{
+new_1-1,46,116,4	script	Newbie Reward	468,{
+	if (!#Freebies) {
+		mes "Here you go!";
+		close2;
+		save "prontera",156,183,2,2;
+		warp "prontera",156,183;
+		announce "Welcome to Impulse Ragnarok Online, "+strcharinfo(0)+" !","0x33FF66";
+		getitembound 2828,2,1;
+		getitembound 15016,1,1;
+		getitembound 2562,1,1;
+		getitembound 2459,1,1;
+		getitembound 2149,1,1;
+		getitembound 12162,3,1;
+		getitembound 20425,1,1;
+		getitembound 19992,1,1;
+		getitembound 13071,1,1;
+		getitembound 14545,10,1;
+		getitembound 12210,10,1;
+		getitembound 14003,10,1;
+		set #Freebies, 1;
+	} else {
+		mes "You already got your share. (Account Bound)";
+		close2;
+		save "prontera",156,183,2,2;
+		warp "prontera",156,183;
+		end;
+	}
+    
 OnInit:
-	waitingroom "Get your Freebies", 0;
-	end;
-
-OnPCLoginEvent:
-    if (!#Freebies) {
-        getitem2 20127,1,1,+0,0,0,0,0,0;
-        getitem2 20050,1,1,+0,0,0,0,0,0;
-        getitem2 20099,1,1,+0,0,0,0,0,0;
-        getitem2 7037,1,1,+0,0,0,0,0,0;
-        getitem2 671,1,1,+0,0,0,0,0,0;
-        getitem2 4142,1,1,+0,0,0,0,0,0;
-        getitem2 2375,1,1,+0,0,0,0,0,0;
-        getitem2 2433,1,1,+0,0,0,0,0,0;
-        getitem2 2537,1,1,+0,0,0,0,0,0;
-        getitem2 2729,1,1,+0,0,0,0,0,0;
-        getitem2 2374,1,1,+0,0,0,0,0,0;
-        announce "Welcome to Impulse Ragnarok Online, "+strcharinfo(0)+" !","0x33FF66";
-        set #Freebies, 1;
-    }
+	waitingroom "[Freebies for Newbies!]",0;
     end;
     
 }

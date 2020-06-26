@@ -248,3 +248,6 @@ bat_a01	mapflag	noreturn
 bat_a02	mapflag	noreturn
 
 //evt_zombie	mapflag	noreturn
+
+//pvp
+guild_vs3	mapflag	noreturn

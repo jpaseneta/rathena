@@ -25,27 +25,18 @@
 	mes "Welcome!, Do you want to Enter";
 	mes "Inside the PVP Arena?";
 	next;
-	for (.@i = 0; .@i < .map_size; .@i++) 
-		.@menu$ = .@menu$ + .map_name$[.@i] + "("+getmapusers(.map$[.@i])+" user(s))" + ":";
-		.@i = select(.@menu$) - 1;
-		warp .map$[.@i], 0, 0;
-		mapannounce .map$[.@i], strcharinfo(0)+ " has entered this PVP room.", bc_all;
-	end;
-
-	
+	if (!agitcheck() || !agitcheck2()) {	
+	if (select("Yes!","No thanks.") == 2) close;		
+	warp "guild_vs3",0,0;		
+	announce strcharinfo(0) + " has entered the PVP Room.",0;				
+	end;	
+	}
 	OnInit:
-		waitingroom "[PVP Warper]", 0;
-		setarray .map_name$,
-			"Enter PVP Room", 
-			"", 
-			"";
-		setarray .map$, 
-			"guild_vs3", 
-			"", 
-			"";
-		.map_size = getarraysize(.map_name$);
-		end;
-}
+	waitingroom "[PVP Warper]", 0;		
+	end;
+	}
+  
+
 
 // Duplicates
 //============================================================
@@ -73,6 +64,3 @@ hugel,91,158,4	duplicate(pvpwarper)	PVP Warper#hug	651
 rachel,123,125,4	duplicate(pvpwarper)	PVP Warper#rac	651
 veins,224,129,4	duplicate(pvpwarper)	PVP Warper#veins	651
 moscovia,217,198,4	duplicate(pvpwarper)	PVP Warper#mosc	651
-
-
- 

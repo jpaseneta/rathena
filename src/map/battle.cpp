@@ -3313,7 +3313,7 @@ static void battle_calc_skill_base_damage(struct Damage* wd, struct block_list *
 					sd->inventory_data[index]->type == IT_WEAPON)
 					wd->damage = sd->inventory_data[index]->weight*8/100; //80% of weight
 
-				ATK_ADDRATE(wd->damage, wd->damage2, 50*skill_lv); //Skill modifier applies to weight only.
+				ATK_ADDRATE(wd->damage, wd->damage2, 100+(50*skill_lv)); //Skill modifier applies to weight only.
 			} else {
 				wd->damage = battle_calc_base_damage(src, sstatus, &sstatus->rhw, sc, tstatus->size, 0); //Monsters have no weight and use ATK instead
 			}
@@ -3969,7 +3969,8 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 			RE_LVL_DMOD(100);
 #else
 			// Pre-Renewal: skill ratio for weapon part of damage [helvetica]
-			skillratio += -100 + 100 * skill_lv;
+			skillratio += 100 * skill_lv - 100;
+			// skillratio += -100 + 140 * skill_lv + sstatus->str + sstatus->int_;
 #endif
 			break;
 		case PA_SACRIFICE:

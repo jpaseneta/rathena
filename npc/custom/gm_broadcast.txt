@@ -1,19 +1,28 @@
--	script	mapNPC	-1,{
+-	script	map	-1,{
 OnWhisperGlobal:
-	announce ""+@whispervar0$,bc_map;
+	set .@GMLevel,60;	// GM level required to access NPC.
+	if (getgmlevel()>=.@GMLevel) {
+		announce strcharinfo(0)+ ": "+@whispervar0$,bc_map;
+	}
 	end;
 }
 
 
--	script	globalNPC	-1,{
+-	script	global	-1,{
 OnWhisperGlobal:
-	announce ""+@whispervar0$,bc_all;
+	set .@GMLevel,60;
+	if (getgmlevel()>=.@GMLevel) {
+		announce strcharinfo(0)+ ": "+@whispervar0$,bc_all;
+	}
 	end;
 }
 
--	script	buffs	-1,{
-OnWhisperGlobal:
-	if (@whispervar0$ == "bless")
-		skilleffect 34,0; sc_start SC_BLESSING,360000,10;
+-	script	F_TriggerMVPDrop	-1,{
+OnNPCKillEvent:
+	if ( rand( 100 ) <= 75 ) {
+		if( getmonsterinfo(killedrid,22) ) {
+			getitem 7227, rand(3,5);
+		}
+	}
 	end;
 }

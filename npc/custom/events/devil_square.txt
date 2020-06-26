@@ -112,14 +112,10 @@ OnClock2205:
 	getmapxy .@map$, .@x, .@y, BL_NPC;
 	mapwarp "ordeal_1-1", .@map$, .@x, .@y;
 	killmonsterall "ordeal_1-1";
-	announce "Devil Square is OPEN. The event will begin in 5 minutes.", bc_all;
-	// sleep 60000;
-	// announce "Devil Square will begin in 4 minutes.", bc_all;
-	// sleep 60000;
-	// announce "Devil Square will begin in 3 minutes.", bc_all;
-	// sleep 60000;
-	// announce "Devil Square will begin in 2 minutes.", bc_all;
-	// sleep 60000;
+	announce "Devil Square is OPEN. The event will begin in 3 minutes. I reward Impulse Trading Card to mighty warriors.", bc_all;
+	sleep 60000;
+	announce "Devil Square will begin in 2 minutes.", bc_all;
+	sleep 60000;
 	announce "Devil Square will begin in 1 minute.", bc_all;
 	sleep 15000;
 	announce "Devil Square has STARTED!", bc_all;

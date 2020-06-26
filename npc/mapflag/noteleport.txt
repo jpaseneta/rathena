@@ -429,3 +429,6 @@ nyd_dun02	mapflag	noteleport
 2012rwc_08	mapflag	noteleport
 
 //evt_zombie	mapflag	noteleport
+
+//pvp
+guild_vs3	mapflag	noteleport

@@ -100,3 +100,7 @@ poring_w02	mapflag	nowarp
 2012rwc_06	mapflag	nowarp
 2012rwc_07	mapflag	nowarp
 2012rwc_08	mapflag	nowarp
+
+//pvp
+guild_vs3	mapflag	nowarp
+

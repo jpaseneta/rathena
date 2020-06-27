@@ -21,11 +21,11 @@ izlude,123,150,20	duplicate(townmall)	Town Mall#6	564
 aldebaran,135,123,20	duplicate(townmall)	Town Mall#7	564
 xmas,154,138,20	duplicate(townmall)	Town Mall#8	564
 comodo,194,154,20	duplicate(townmall)	Town Mall#9	564
-yuno,153,51,20	duplicate(townmall)	Town Mall#10	564
-amatsu,203,83,20	duplicate(townmall)	Town Mall#11	564
+yuno,153,189,20	duplicate(townmall)	Town Mall#10	564
+amatsu,99,154,20	duplicate(townmall)	Town Mall#11	564
 gonryun,163,128,20	duplicate(townmall)	Town Mall#12	564
 umbala,106,156,20	duplicate(townmall)	Town Mall#13	564
-niflheim,212,185,20	duplicate(townmall)	Town Mall#14	564
+niflheim,201,185,20	duplicate(townmall)	Town Mall#14	564
 louyang,229,103,20	duplicate(townmall)	Town Mall#15	564
 jawaii,248,141,20	duplicate(townmall)	Town Mall#16	564
 ayothaya,212,173,20	duplicate(townmall)	Town Mall#17	564

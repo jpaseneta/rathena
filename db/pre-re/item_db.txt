@@ -2344,7 +2344,7 @@
 4139,Joker_Card,Joker Card,6,20,,10,,,,,,,,136,,,,,{ skill "TF_STEAL",1; },{},{}
 4140,Knight_Of_Abyss_Card,Abysmal Knight Card,6,20,,10,,,,,,,,2,,,,,{ bonus2 bAddClass,Class_Boss,25; },{},{}
 4141,Evil_Druid_Card,Evil Druid Card,6,20,,10,,,,,,,,16,,,,,{ bonus bDefEle,Ele_Undead; bonus bInt,1; bonus bDef,1; },{},{}
-4142,Doppelganger_Card,Doppelganger Card,6,20,,10,,,,,,,,2,,,,,{ bonus bAspdRate,10; },{},{}
+4142,Doppelganger_Card,Doppelganger Card,6,20,,10,,,,,,,,2,,,,,{ bonus bAspdRate,20; },{},{}
 4143,Orc_Hero_Card,Orc Hero Card,6,20,,10,,,,,,,,769,,,,,{ bonus bVit,3; bonus2 bResEff,Eff_Stun,10000; },{},{}
 4144,Osiris_Card,Osiris Card,6,20,,10,,,,,,,,136,,,,,{ bonus bRestartFullRecover; },{},{}
 4145,Berzebub_Card,Berzebub Card,6,20,,10,,,,,,,,136,,,,,{ bonus bVariableCastrate,-30; },{},{}
@@ -8451,9 +8451,9 @@
 14281,Praccsinos_Box,Praccsinos Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 2752,1; },{},{}
 14282,Emperium_Box,Emperium Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 714,1; },{},{}
 14283,Marriage_Certificate_Box,Written Oath Of Marriage Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 6026,1; },{},{}
-14284,Muffler_Box,Muffler Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 2548,1; },{},{}
-14285,Balkiriah_Shield_Box,Balkiriah Shield Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 2137,1; },{},{}
-14286,Skull_Ring_Box,Skull Ring Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 2763,1; },{},{}
+14284,Muffler_Box,Muffler Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ rentitem 2548,604800; },{},{}
+14285,Balkiriah_Shield_Box,Balkiriah Shield Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ rentitem 2137,604800; },{},{}
+14286,Skull_Ring_Box,Skull Ring Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ rentitem 2763,604800; },{},{}
 14287,Baricade_Repair_Kit,Barricade Repair Kit,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 1019,30; getitem 999,10; getitem 1011,10; getitem 984,5; },{},{}
 14288,Guardian_Stone_Repair_Kit,Guardian Stone Repair Kit,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 984,1; getitem 985,1; getitem 7049,30; getitem 717,5; getitem 716,5; getitem 715,5; },{},{}
 14289,Cloth_Dye_Coupon_Box,New Clothing Dye Coupon Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 6046,1; },{},{}

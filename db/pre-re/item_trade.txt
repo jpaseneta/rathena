@@ -1217,7 +1217,7 @@
 14115,475,100	// Refined Infiltrator Box
 14116,475,100	// Refined Muramasa Box
 14117,475,100	// Refined Excalibur Box
-14118,475,100	// Combat Knife Box
+14118,259,100	// Combat Knife Box
 14119,475,100	// Counter Dagger Box
 14120,475,100	// Refined Kaiser Knuckle Box
 14121,475,100	// Refined Mighty Staff Box
@@ -1790,3 +1790,10 @@
 5819,507,100	// Carnival Circlet
 5821,507,100	// Gold Tulip Hairpin
 5822,499,100	// Love Chick Hat
+
+//NEO Items
+2137,259,100
+2763,259,100
+2548,259,100
+13021,259,100
+

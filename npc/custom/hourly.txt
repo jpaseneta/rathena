@@ -153,7 +153,7 @@ Hourly_Rewads:
 return;
 }
 
-prontera,143,179,5	script	Hourly Rewards Shop	509,{ 
+prontera,139,175,5	script	Hourly Rewards Shop	509,{ 
 	callshop "Hourly Shop", 1;
 	OnInit:
 	waitingroom "[Hourly Shop]", 0;

@@ -7,7 +7,6 @@
 //===== Compatible With: =====================================
 //= rAthena Project
 
-
 new_1-1,46,116,4	script	Newbie Reward	468,{
 	if (!#Freebies) {
 		mes "Here you go!";

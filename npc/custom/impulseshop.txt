@@ -21,10 +21,10 @@ prontera,149,188,5	script	Impulse Shop	757,{
 	mes "Welcome to ^0000FFImpulse Shop^000000.";
 	mes "Each shop may purchase using ^FF0000Different Currency^000000.";
 	mes "^00FF00____________________________^000000";
-	mes "So,Which shop you would like to look at it";
+	mes "So, select the shop you would like to look at";
 	next;
 	// Menu Selection
-	select("Proof of Donation","Impulse Trading Card","Cash Points");
+	select("~Proof of Donation","~Impulse Trading Card");
 
 	ClearData();
 	ShopSettings( @menu );
@@ -47,37 +47,59 @@ prontera,149,188,5	script	Impulse Shop	757,{
 				// POD SHOP
 				// Currency [ Item ID / Variable Name ]
 				set @Currency$,"7179";
-				dispbottom strnpcinfo(1)+": Accepted Payment Method: "+ getitemname(atoi(@Currency$));
-				dispbottom strnpcinfo(1)+": You have " + countitem(atoi(@Currency$))+" "+ getitemname(atoi(@Currency$));
-				dispbottom strnpcinfo(1)+": Notice: Discount Skill won't work at me, you'll have to pay the full price.";
-				// Item ID Lists
-				setarray @ItemLists[0],5374,5518,5137,5800,5288,5151,5210,5376,5305,5211,5325,5224,5293,5462,5389,5313,5539,5314,5377,5357,5361,5362,5463,5393,5481,5564,5423,5397,5508,18539,5592,5453,5452,5451,5428,5788,5155,5490,18670,5574;
-				// Item Price
-				setarray @ItemCost[0],12,12,8,8,5,5,6,6,5,5,7,8,9,7,4,7,16,8,6,3,4,7,8,7,6,10,10,4,4,12,7,9,11,16,10,5,8,5,12,8;
+				dispbottom "Accepted Payment Method: "+ getitemname(atoi(@Currency$));
+				dispbottom "You have " + countitem(atoi(@Currency$))+" "+ getitemname(atoi(@Currency$));
+				dispbottom "Notice: Discount Skill won't work at me, you'll have to pay the full price.";
+				
+				switch(select("~Headgears","~Costumes")){
+					case 1: //headgears
+						// Item ID Lists
+						setarray @ItemLists[0],5374,5518,5137,5800,5288,5151,5210,5376,5305,5211,5325,5224,5293,5462,5389,5313,5539,5314,5377,5357,5361,5362,5463,5393,5481,5564,5423,5397,5508,18539,5592,5453,5452,5451,5428,5788,5155,5490,18670,5574;
+						// Item Price
+						setarray @ItemCost[0],12,12,8,8,5,5,6,6,5,5,7,8,9,7,4,7,16,8,6,3,4,7,8,7,6,10,10,4,4,12,7,9,11,16,10,5,8,5,12,8;
+						break;
+					case 2:
+						setarray @ItemLists[0],20727,20500,20764,20746,20509,20516,20404,20405,31057,20164,19599,31055,20130,20234,31589;
+						setarray @ItemCost[0],12,12,12,12,12,12,10,10,10,10,8,8,8,5,5;
+						break;
+				}
+				
 				break;
 			Case 2:
 				// TCG SHOP
 				// Currency [ Item ID / Variable Name ]
 				set @Currency$,"7227";
-				dispbottom strnpcinfo(1)+": Accepted Payment Method: "+ getitemname(atoi(@Currency$));
-				dispbottom strnpcinfo(1)+": You have " + countitem(atoi(@Currency$))+" "+ getitemname(atoi(@Currency$));
-				dispbottom strnpcinfo(1)+": Notice: Discount Skill won't work at me, you'll have to pay the full price.";
-				// Item ID Lists
-				setarray @ItemLists[0],2306,2302,2303,2304,2305,2301;
-				// Item Price
-				setarray @ItemCost[0],2,2,3,4,5,6;
+				dispbottom "Accepted Payment Method: "+ getitemname(atoi(@Currency$));
+				dispbottom "You have " + countitem(atoi(@Currency$))+" "+ getitemname(atoi(@Currency$));
+				dispbottom "Notice: Discount Skill won't work at me, you'll have to pay the full price.";
+				switch(select("~Consumables","~Costumes","~Convert to POD")){
+					case 1: //consumables
+						// Item ID Lists
+						setarray @ItemLists[0],7040,14545,12210,14586,7776,13997,14000,13602,7621,13601,7620,12921,7619,12920,13584,13576,13588;
+						// Item Price
+						setarray @ItemCost[0],5,10,10,40,40,600,600,100,15,200,100,800,100,800,50,50,100;
+						break;
+					case 2:
+						setarray @ItemLists[0],19876,20221,19810,19817,19859,20079,31290,31395,20425,20311,20319,31315,31121,31625,20248,20249,20250,20468,19996,20313,20030,20029,19992,19952;
+						setarray @ItemCost[0],500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,200,200,100,100,100,100,100;
+						break;
+					case 3:
+						setarray @ItemLists[0],7179;
+						setarray @ItemCost[0],100;
+
+				}
 				break;
-			Case 3:
-				// Currency [ Item ID / Variable Name ]
-				set @Currency$,"#CASHPOINTS";
-				dispbottom strnpcinfo(1)+": Accepted Payment Method: Cashpoints";
-				dispbottom strnpcinfo(1)+": You have " + getd( @Currency$ )+" Cashpoints";
-				dispbottom strnpcinfo(1)+": Notice: Discount Skill won't work at me, you'll have to pay the full price.";
-				// Item ID Lists
-				setarray @ItemLists[0],2306,2302,2303,2304,2305,2301;
-				// Item Price
-				setarray @ItemCost[0],20,22,34,445,52,641;
-				break;
+			// Case 3:
+				////Currency [ Item ID / Variable Name ]
+				// set @Currency$,"#CASHPOINTS";
+				// dispbottom strnpcinfo(1)+": Accepted Payment Method: Cashpoints";
+				// dispbottom strnpcinfo(1)+": You have " + getd( @Currency$ )+" Cashpoints";
+				// dispbottom strnpcinfo(1)+": Notice: Discount Skill won't work at me, you'll have to pay the full price.";
+				////Item ID Lists
+				// setarray @ItemLists[0],2306,2302,2303,2304,2305,2301;
+				////Item Price
+				// setarray @ItemCost[0],20,22,34,445,52,641;
+				// break;
 			// Case 4,5,6.....etc...
 			default:
 				ErrorNotice( "Invalid Menu Selection for Menu "+@menu+"." );

@@ -160,6 +160,6 @@ prontera,139,175,5	script	Hourly Rewards Shop	509,{
 	end;
 }
 
--	pointshop	Hourly Shop	509,#HourlyRewards,901:1,902:10,903:15,904:1,905:200
+-	pointshop	Hourly Shop	509,#HourlyRewards,12202:5,12203:5,12204:5,12205:5,12206:5,12207:5,12210:5,12412:10,31290:170,31395:170,31315:170,31121:170,31625:170,20404:300
 
 //<ITEM_ID>:<PRICE>,<ITEM_ID>:<PRICE>,<ITEM_ID>:<PRICE>,<ITEM_ID>:<PRICE>

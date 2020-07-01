@@ -28,9 +28,9 @@ menu	"Last Warp ^777777["+lastwarp$+"]^000000",-,
     	" ~ Fields",Fields,
     	" ~ Dungeons",Dungeons,
     	" ~ Guild Castles",Castles,
-    	" ~ Guild Dungeons",Guild_Dungeons,
-    	" ~ Instances",Instances,
-    	" ~ Special Areas",Special;
+    	// " ~ Guild Dungeons",Guild_Dungeons,
+    	" ~ Instances",Instances;
+    	// " ~ Special Areas",Special;
 
 	if (lastwarp$ == "")
 		message strcharinfo(0),"You haven't warped anywhere yet.";
@@ -397,8 +397,8 @@ D42: Restrict("RE");
 	Castles:
 // --------------------------------------------------
 menu	"[FE] Aldebaran Castles",C1, "[FE] Geffen Castles",C2, "[FE] Payon Castles",C3,
-    	"[FE] Prontera Castles",C4, "[SE] Arunafeltz Castles",C5, "[SE] Schwarzwald Castles",C6,
-		"[TE] Aldebaran Castles",C7, "[TE] Prontera Castles",C8;
+    	"[FE] Prontera Castles",C4, "[SE] Arunafeltz Castles",C5, "[SE] Schwarzwald Castles",C6;
+		// "[TE] Aldebaran Castles",C7, "[TE] Prontera Castles",C8;
 
 C1: setarray @c[2],48,83,95,249,142,85,239,242,264,90;
 	Disp("Neuschwanstein:Hohenschwangau:Nuenberg:Wuerzburg:Rothenburg");
@@ -418,116 +418,138 @@ C5: setarray @c[2],158,272,83,47,68,155,299,345,292,107;
 C6: setarray @c[2],293,100,288,252,97,196,137,90,71,315;
 	Disp("Himinn:Andlangr:Viblainn:Hljod:Skidbladnir");
 	Pick("","sch_gld","sch_gld","sch_gld","sch_gld","sch_gld");
-C7: Restrict("RE");
-	setarray @c[2],48,83,95,249,142,85,239,242,264,90;
-	Disp("Kafragarten 1:Kafragarten 2:Kafragarten 3:Kafragarten 4:Kafragarten 5");
-	Pick("","te_alde_gld","te_alde_gld","te_alde_gld","te_alde_gld","te_alde_gld");
-C8: Restrict("RE");
-	setarray @c[2],134,65,240,128,153,137,111,240,208,240;
-	Disp("Gloria 1:Gloria 2:Gloria 3:Gloria 4:Gloria 5");
-	Pick("","te_prt_gld","te_prt_gld","te_prt_gld","te_prt_gld","te_prt_gld");
+// C7: Restrict("RE");
+	// setarray @c[2],48,83,95,249,142,85,239,242,264,90;
+	// Disp("Kafragarten 1:Kafragarten 2:Kafragarten 3:Kafragarten 4:Kafragarten 5");
+	// Pick("","te_alde_gld","te_alde_gld","te_alde_gld","te_alde_gld","te_alde_gld");
+// C8: Restrict("RE");
+	// setarray @c[2],134,65,240,128,153,137,111,240,208,240;
+	// Disp("Gloria 1:Gloria 2:Gloria 3:Gloria 4:Gloria 5");
+	// Pick("","te_prt_gld","te_prt_gld","te_prt_gld","te_prt_gld","te_prt_gld");
 	
 // --------------------------------------------------
 	Guild_Dungeons:
 // --------------------------------------------------
-menu	"Baldur",G1, "Luina",G2, "Valkyrie",G3, "Britoniah",G4,
-    	"Arunafeltz",G5, "Schwarzwald",G6, "Kafragarten",G7,
-		"Gloria",G8;
+// menu	"Baldur",G1, "Luina",G2, "Valkyrie",G3, "Britoniah",G4,
+    	// "Arunafeltz",G5, "Schwarzwald",G6, "Kafragarten",G7,
+		// "Gloria",G8;
 
-G1: Restrict("RE",2,3);
-	setarray @c[2],119,93,119,93,120,130;
-	Disp("Baldur F1:Baldur F2:Hall of Abyss");
-	Pick("","gld_dun01","gld_dun01_2","gld2_pay");
-G2: Restrict("RE",2,3);
-	setarray @c[2],39,161,39,161,147,155;
-	Disp("Luina F1:Luina F2:Hall of Abyss");
-	Pick("","gld_dun02","gld_dun02_2","gld2_ald");
-G3: Restrict("RE",2,3);
-	setarray @c[2],50,44,50,44,140,132;
-	Disp("Valkyrie F1:Valkyrie F2:Hall of Abyss");
-	Pick("","gld_dun03","gld_dun03_2","gld2_prt");
-G4: Restrict("RE",2,3);
-	setarray @c[2],116,45,116,45,152,118;
-	Disp("Britoniah F1:Britoniah F2:Hall of Abyss");
-	Pick("","gld_dun04","gld_dun04_2","gld2_gef");
-G5: Go("arug_dun01",199,195);
-G6: Go("schg_dun01",200,124);
-G7: Restrict("RE");
-	Go("teg_dun01",42,36);
-G8: Restrict("RE");
-	Go("teg_dun02",26,160);
+// G1: Restrict("RE",2,3);
+	// setarray @c[2],119,93,119,93,120,130;
+	// Disp("Baldur F1:Baldur F2:Hall of Abyss");
+	// Pick("","gld_dun01","gld_dun01_2","gld2_pay");
+// G2: Restrict("RE",2,3);
+	// setarray @c[2],39,161,39,161,147,155;
+	// Disp("Luina F1:Luina F2:Hall of Abyss");
+	// Pick("","gld_dun02","gld_dun02_2","gld2_ald");
+// G3: Restrict("RE",2,3);
+	// setarray @c[2],50,44,50,44,140,132;
+	// Disp("Valkyrie F1:Valkyrie F2:Hall of Abyss");
+	// Pick("","gld_dun03","gld_dun03_2","gld2_prt");
+// G4: Restrict("RE",2,3);
+	// setarray @c[2],116,45,116,45,152,118;
+	// Disp("Britoniah F1:Britoniah F2:Hall of Abyss");
+	// Pick("","gld_dun04","gld_dun04_2","gld2_gef");
+// G5: Go("arug_dun01",199,195);
+// G6: Go("schg_dun01",200,124);
+// G7: Restrict("RE");
+	// Go("teg_dun01",42,36);
+// G8: Restrict("RE");
+	// Go("teg_dun02",26,160);
 
 // --------------------------------------------------
 	Instances:
 // --------------------------------------------------
-menu	"Bakonawa Lake",I1, "Bangungot Hospital 2F",I2, "Buwaya Cave",I3,
-		"Devil Tower",I4, "Eclage Interior",I5, "Endless Tower",I6,
-		"Faceworms Nest",I7, "Geffen Magic Tournament",I8, "Ghost Palace",I9,
-		"Hazy Forest",I10, "Horror Toy Factory",I11, "Malangdo Culvert",I12,
-		"Nidhoggur's Nest",I13, "Octopus Cave",I14, "Old Glast Heim",I15,
-		"Orc's Memory",I16, "Sarah and Fenrir",I17, "Sara Memory",I18,
-		"Sealed Shrine",I19, "Wolfchev's Laboratory",I20;
+menu	
+// "Bakonawa Lake",I1, 
+		// "Bangungot Hospital 2F",I2, 
+		// "Buwaya Cave",I3,
+		// "Devil Tower",I4, 
+		// "Eclage Interior",I5, 
+		"Endless Tower",I6,
+		// "Faceworms Nest",I7, 
+		// "Geffen Magic Tournament",I8, 
+		// "Ghost Palace",I9,
+		// "Hazy Forest",I10, 
+		// "Horror Toy Factory",I11, 
+		// "Malangdo Culvert",I12,
+		"Nidhoggur's Nest",I13, 
+		// "Octopus Cave",I14, 
+		// "Old Glast Heim",I15,
+		"Orc's Memory",I16, 
+		// "Sarah and Fenrir",I17, 
+		// "Sara Memory",I18,
+		"Sealed Shrine",I19
+		// "Wolfchev's Laboratory",I20
+		;
 
-I1: Restrict("RE");
-	Go("ma_scene01",172,175);
-I2: Restrict("RE");
-	Go("ma_dun01",151,8);
-I3: Restrict("RE");
-	Go("ma_fild02",316,317);
-I4: Restrict("RE");
-	Go("dali02",137,115);
-I5: Restrict("RE");
-	Go("ecl_hub01",129,12);
+// I1: Restrict("RE");
+	// Go("ma_scene01",172,175);
+// I2: Restrict("RE");
+	// Go("ma_dun01",151,8);
+// I3: Restrict("RE");
+	// Go("ma_fild02",316,317);
+// I4: Restrict("RE");
+	// Go("dali02",137,115);
+// I5: Restrict("RE");
+	// Go("ecl_hub01",129,12);
 I6: Go("e_tower",72,112);
-I7: Restrict("RE");
-	Go("dali",85,64);
-I8: Restrict("RE");
-	Go("dali",94,141);
-I9: Restrict("RE");
-	Go("dali02",46,128);
-I10: Restrict("RE");
-	Go("bif_fild01",161,334);
-I11: Restrict("RE");
-	Go("xmas",234,298);
-I12: Restrict("RE");
-	Go("mal_in01",164,21);
+// I7: Restrict("RE");
+	// Go("dali",85,64);
+// I8: Restrict("RE");
+	// Go("dali",94,141);
+// I9: Restrict("RE");
+	// Go("dali02",46,128);
+// I10: Restrict("RE");
+	// Go("bif_fild01",161,334);
+// I11: Restrict("RE");
+	// Go("xmas",234,298);
+// I12: Restrict("RE");
+	// Go("mal_in01",164,21);
 I13: Go("nyd_dun02",95,193);
-I14: Restrict("RE");
-	Go("mal_dun01",152,230);
-I15: Restrict("RE");
-	Go("glast_01",204,268);
+// I14: Restrict("RE");
+	// Go("mal_dun01",152,230);
+// I15: Restrict("RE");
+	// Go("glast_01",204,268);
 I16: Go("gef_fild10",240,198);
-I17: Restrict("RE");
-	Go("dali02",92,141);
-I18: Restrict("RE");
-	Go("dali",133,108);
+// I17: Restrict("RE");
+	// Go("dali02",92,141);
+// I18: Restrict("RE");
+	// Go("dali",133,108);
 I19: Go("monk_test",306,143);
-I20: Restrict("RE");
-	Go("lhz_dun04",148,269);
+// I20: Restrict("RE");
+	// Go("lhz_dun04",148,269);
 
 // --------------------------------------------------
 	Special:
 // --------------------------------------------------
-menu	"Auction Hall",S1, "Battlegrounds",S2, "Casino",S3, "Dimensional Rift",S4,
-		"Eden Group Headquarters",S5, "Kunlun Arena",S6, "Izlude Arena",S7, 
-		"Monster Race Arena",S8, "Para Market",S9, "Turbo Track",S10;
+// menu	"Auction Hall",S1, 
+		// "Battlegrounds",S2, 
+		// "Casino",S3, 
+		// "Dimensional Rift",S4,
+		// "Eden Group Headquarters",S5, 
+		// "Kunlun Arena",S6, 
+		// "Izlude Arena",S7, 
+		// "Monster Race Arena",S8, 
+		// "Para Market",S9, 
+		// "Turbo Track",S10;
 
-S1: Go("auction_01",22,68);
-S2: Go("bat_room",154,150);
-S3: Go("cmd_in02",179,129);
-S4: Restrict("RE");
-	Go("dali",113,82);	
-S5: Restrict("RE");
-	Go("moc_para01",31,14);
-S6: Go("gon_test",48,10);
-S7: Go("arena_room",100,88);
-S8: Go("p_track01",62,41);
-S9: Restrict("RE");
-	Go("paramk",97,17);
-S10: Go("turbo_room",99,114);
+// S1: Go("auction_01",22,68);
+// S2: Go("bat_room",154,150);
+// S3: Go("cmd_in02",179,129);
+// S4: Restrict("RE");
+	// Go("dali",113,82);	
+// S5: Restrict("RE");
+	// Go("moc_para01",31,14);
+// S6: Go("gon_test",48,10);
+// S7: Go("arena_room",100,88);
+// S8: Go("p_track01",62,41);
+// S9: Restrict("RE");
+	// Go("paramk",97,17);
+// S10: Go("turbo_room",99,114);
 
 OnInit:
-	.Satan_Morocc = true;	//	false will enable moc_fild 4,5,6,8,9,10,14,15 while disable moc_fild 20,21,22 Default is true.
+	.Satan_Morocc = false;	//	false will enable moc_fild 4,5,6,8,9,10,14,15 while disable moc_fild 20,21,22 Default is true.
 	.OnlyFirstFld = false;	//	true will teleport to the first level of the Fields  Default is false.
 	.OnlyFirstDun = false;	//	true will teleport to the first level of the Dungeons  Default is false.
 }

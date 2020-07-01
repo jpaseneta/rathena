@@ -694,33 +694,33 @@
 5266,507,100	// Bunny Band
 5267,507,100	// Sakkat
 5268,507,100	// Grand Circlet
-5277,73,100	// Yellow Bandana
-5283,73,100	// Chick Hat
-5286,73,100	// Pecopeco Hairband
-5288,73,100	// Red Glasses
-5293,73,100	// Ramen Hat
-5294,73,100	// Whisper Mask
-5313,73,100	// Diadem
-5314,73,100	// Hockey Mask
-5315,73,100	// Observer
-5324,73,100	// Little Angel Doll
-5372,73,100	// Koneko Hat
-5374,73,100	// Gigantic Majestic Goat
-5375,73,100	// Orc Hero Headdress
-5376,73,100	// Flying Evil Wing
-5377,73,100	// Gentleman's Pipe
-5378,73,100	// Bunny Top Hat
-5380,73,100	// Fish Head Hat
-5381,73,100	// Santa Poring Hat
-5382,73,100	// Bell Ribbon
+5277,72,100	// Yellow Bandana
+5283,72,100	// Chick Hat
+5286,72,100	// Pecopeco Hairband
+5288,72,100	// Red Glasses
+5293,72,100	// Ramen Hat
+5294,72,100	// Whisper Mask
+5313,72,100	// Diadem
+5314,72,100	// Hockey Mask
+5315,72,100	// Observer
+5324,72,100	// Little Angel Doll
+5372,72,100	// Koneko Hat
+5374,72,100	// Gigantic Majestic Goat
+5375,72,100	// Orc Hero Headdress
+5376,72,100	// Flying Evil Wing
+5377,72,100	// Gentleman's Pipe
+5378,72,100	// Bunny Top Hat
+5380,72,100	// Fish Head Hat
+5381,72,100	// Santa Poring Hat
+5382,72,100	// Bell Ribbon
 5391,507,100	// Toast
-5420,73,100	// Mask Of Ifrit
-5421,73,100	// Ears Of Ifrit
+5420,72,100	// Mask Of Ifrit
+5421,72,100	// Ears Of Ifrit
 5462,457,100	// Spiked Scarf
 5463,457,100	// Rainbow Scarf
 5502,457,100	// Necromancer's Hood
-5503,73,100	// Magic Rabit Hat
-5505,73,100	// Asara Fairy Hat
+5503,72,100	// Magic Rabit Hat
+5505,72,100	// Asara Fairy Hat
 5529,457,100	// Satanic Bone Helm
 5596,507,100	// 4Leaf Clover In Mouth
 5597,507,100	// Bubble Gum In Mouth

@@ -6204,8 +6204,8 @@
 11500,Light_Yellow_Pot,Light Yellow Potion,0,550,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ itemheal rand(175,235),0; },{},{}
 11501,Light_White_Pot,Light White Potion,0,1200,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ itemheal rand(325,405),0; },{},{}
 11502,Light_Blue_Pot,Light Blue Potion,0,5000,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ itemheal 0,rand(40,60); },{},{}
-11503,Siege_White_Potion,WoE White Potion,0,0,,100,,,,,0xFFFFFFFF,63,2,,,,,,{ itemheal rand(400,500),0; },{},{}
-11504,Siege_Blue_Potion,WoE Blue Potion,0,0,,100,,,,,0xFFFFFFFF,63,2,,,,,,{ itemheal 0,rand(50,70); },{},{}
+11503,Siege_White_Potion,WoE White Potion,0,0,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ itemheal rand(400,500),0; },{},{}
+11504,Siege_Blue_Potion,WoE Blue Potion,0,0,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ itemheal 0,rand(50,70); },{},{}
 11505,Iris,Iris,0,0,,30,,,,,0xFFFFFFFF,63,2,,,,,,{ itemheal 0,150; },{},{}
 11506,Fanta_Orange,Fanta Orange,0,800,,100,,,,,0xFFFFFFFF,63,2,,,,,,{ itemheal rand(50,70),rand(10,12); },{},{}
 11507,Fanta_Grape,Fanta Grape,0,800,,100,,,,,0xFFFFFFFF,63,2,,,,,,{ itemheal rand(50,70),rand(10,12); },{},{}
@@ -6396,32 +6396,32 @@
 12072,Str_Dish07,Whole Roast,0,40000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_STRFOOD,1200000,7; percentheal 10,4; },{},{}
 12073,Str_Dish08,Bearfoot Special,0,60000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_STRFOOD,1200000,8; percentheal 15,6; },{},{}
 12074,Str_Dish09,Tendon Satay,0,80000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_STRFOOD,1200000,9; percentheal 15,8; },{},{}
-12075,Str_Dish10,Steamed Tongue,0,100000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_STRFOOD,1200000,10; percentheal 20,20; },{},{}
+12075,Str_Dish10,Steamed Tongue,0,100000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_STR_CASH,1800000,10; percentheal 20,20; },{},{}
 12076,Int_Dish06,Red Mushroom Wine,0,20000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_INTFOOD,1200000,6; percentheal 2,10; },{},{}
 12077,Int_Dish07,Special Royal Jelly Herbal Tea,0,40000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_INTFOOD,1200000,7; percentheal 4,10; },{},{}
 12078,Int_Dish08,Royal Family Tea,0,60000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_INTFOOD,1200000,8; percentheal 6,10; },{},{}
 12079,Int_Dish09,Tristan XII,0,80000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_INTFOOD,1200000,9; percentheal 8,15; },{},{}
-12080,Int_Dish10,Dragon Breath Cocktail,0,100000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_INTFOOD,1200000,10; percentheal 10,20; },{},{}
+12080,Int_Dish10,Dragon Breath Cocktail,0,100000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_INT_CASH,1800000,10; percentheal 10,20; },{},{}
 12081,Vit_Dish06,Awfully Bitter Bracer,0,20000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_VITFOOD,1200000,6; percentheal 13,0; },{},{}
 12082,Vit_Dish07,Sumptuous Feast,0,40000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_VITFOOD,1200000,7; percentheal 16,0; },{},{}
 12083,Vit_Dish08,Giant Burito,0,60000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_VITFOOD,1200000,8; percentheal 19,0; },{},{}
 12084,Vit_Dish09,Ascending Dragon Soup,0,80000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_VITFOOD,1200000,9; percentheal 22,0; },{},{}
-12085,Vit_Dish10,Immortal Stew,0,100000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_VITFOOD,1200000,10; percentheal 25,0; },{},{}
+12085,Vit_Dish10,Immortal Stew,0,100000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_VIT_CASH,1800000,10; percentheal 25,0; },{},{}
 12086,Agi_Dish06,Chile Shrimp Gratin,0,20000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_AGIFOOD,1200000,6; percentheal 7,2; },{},{}
 12087,Agi_Dish07,Steamed Alligator with Vegetable,0,40000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_AGIFOOD,1200000,7; percentheal 8,2; },{},{}
 12088,Agi_Dish08,Incredibly Spicy Curry,0,60000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_AGIFOOD,1200000,8; percentheal 9,2; },{},{}
 12089,Agi_Dish09,Special Meat Stew,0,80000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_AGIFOOD,1200000,9; percentheal 10,2; },{},{}
-12090,Agi_Dish10,Steamed Desert Scorpions,0,100000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_AGIFOOD,1200000,10; percentheal 15,5; },{},{}
+12090,Agi_Dish10,Steamed Desert Scorpions,0,100000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_AGI_CASH,1800000,10; percentheal 15,5; },{},{}
 12091,Dex_Dish06,Peach Cake,0,20000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_DEXFOOD,1200000,6; percentheal 5,6; },{},{}
 12092,Dex_Dish07,Soul Haunted Bread,0,40000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_DEXFOOD,1200000,7; percentheal 5,7; },{},{}
 12093,Dex_Dish08,Special Toast,0,60000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_DEXFOOD,1200000,8; percentheal 5,8; },{},{}
 12094,Dex_Dish09,Heavenly Fruit Juice,0,80000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_DEXFOOD,1200000,9; percentheal 5,9; },{},{}
-12095,Dex_Dish10,Hwergelmir's Tonic,0,100000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_DEXFOOD,1200000,10; percentheal 10,10; },{},{}
+12095,Dex_Dish10,Hwergelmir's Tonic,0,100000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_DEX_CASH,1800000,10; percentheal 10,10; },{},{}
 12096,Luk_Dish06,Lucky Soup,0,20000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_LUKFOOD,1200000,6; percentheal 6,3; },{},{}
 12097,Luk_Dish07,Assorted Shish Kebob,0,40000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_LUKFOOD,1200000,7; percentheal 7,3; },{},{}
 12098,Luk_Dish08,Strawberry Flavored Rice Ball,0,60000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_LUKFOOD,1200000,8; percentheal 9,3; },{},{}
 12099,Luk_Dish09,Blood Flavored Soda,0,80000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_LUKFOOD,1200000,9; percentheal 10,4; },{},{}
-12100,Luk_Dish10,Cooked Nine Tail's Tails,0,100000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_LUKFOOD,1200000,10; percentheal 14,8; },{},{}
+12100,Luk_Dish10,Cooked Nine Tail's Tails,0,100000,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_LUK_CASH,1800000,10; percentheal 14,8; },{},{}
 12101,Citron,Citron,0,20,,300,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FLEEFOOD,180000,30; },{},{}
 12102,Meat_Skewer,Grilled Skewer,0,20,,300,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_HITFOOD,180000,30; },{},{}
 12103,Bloody_Dead_Branch,Bloody Branch,2,10000,,200,,,,,0xFFFFFFFF,63,2,,,,,,{ monster "this",-1,-1,"--ja--",-1-MOBG_Bloody_Dead_Branch,1,""; },{},{}
@@ -6526,12 +6526,12 @@
 //===================================================================
 // Cash Shop Usable Items
 //===================================================================
-12202,Str_Dish10_,Steamed Tongue,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_STR_CASH,1800000,10; percentheal 15,5; },{},{}
-12203,Agi_Dish10_,Steamed Scorpion,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_AGI_CASH,1800000,10; percentheal 15,5; },{},{}
-12204,Int_Dish10_,Dragon Breath Cocktail,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_INT_CASH,1800000,10; percentheal 15,5; },{},{}
-12205,Dex_Dish10_,Hwergelmir's Tonic,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_DEX_CASH,1800000,10; percentheal 15,5; },{},{}
-12206,Luk_Dish10_,Cooked Nine Tail's Tails,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_LUK_CASH,1800000,10; percentheal 15,5; },{},{}
-12207,Vit_Dish10_,Stew Of Immortality,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_VIT_CASH,1800000,10; percentheal 15,5; },{},{}
+12202,Str_Dish10_,Steamed Tongue,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_STR_CASH,3600000,10; percentheal 15,5; },{},{}
+12203,Agi_Dish10_,Steamed Scorpion,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_AGI_CASH,3600000,10; percentheal 15,5; },{},{}
+12204,Int_Dish10_,Dragon Breath Cocktail,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_INT_CASH,3600000,10; percentheal 15,5; },{},{}
+12205,Dex_Dish10_,Hwergelmir's Tonic,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_DEX_CASH,3600000,10; percentheal 15,5; },{},{}
+12206,Luk_Dish10_,Cooked Nine Tail's Tails,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_LUK_CASH,3600000,10; percentheal 15,5; },{},{}
+12207,Vit_Dish10_,Stew Of Immortality,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_FOOD_VIT_CASH,3600000,10; percentheal 15,5; },{},{}
 12208,Battle_Manual,Battle Manual,2,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_EXPBOOST,1800000,50; },{},{}
 12209,Insurance,Life Insurance,2,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_LIFEINSURANCE,1800000,0; },{},{}
 12210,Bubble_Gum,Bubble Gum,2,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_ITEMBOOST,1800000,200; },{},{}
@@ -10897,7 +10897,7 @@
 20231,C_Snowman_Hat,Costume Snowman Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,616,{},{},{}
 20232,C_Celines_Ribbon,Costume Celine Ribbon,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,967,{},{},{}
 20233,C_Gold_Angel_Sculpture,Costume Golden Angel,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,646,{},{},{}
-20234,C_Baphomet_Hat,Costume Baphomet Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,7168,,1,0,1311,{ bonus bMaxHPrate,15; bonus bMaxSPrate,15; bonus2 bAddRace,RC_All,15; bonus2 bMagicAddRace,RC_All,15; bonus2 bAddItemHealRate,519,2015; },{},{}
+20234,C_Baphomet_Hat,Costume Baphomet Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,7168,,1,0,1311,{},{},{}
 20235,C_Frozen_Land_Rose,Costume Frozen Rose,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1025,{},{},{}
 20236,C_Hellomother_Hat,Costume Arc Angeling Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,241,{},{},{}
 20237,C_Pink_Fur_Hat,Costume Pink Beanie,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,281,{},{},{}

@@ -150,5 +150,5 @@
 
 // Duplicates
 //============================================================
-prt_in,28,73,4	duplicate(Wise Old Woman)	Wise Old Woman#eAcustomPrtIn	78
-prontera,168,178,1	duplicate(Wise Old Woman)	Wise Old Woman#eAcustomPrt	78
+prt_in,28,73,4	duplicate(Wise Old Woman)	Wise Old Woman#PrtIn	78
+prontera,168,178,1	duplicate(Wise Old Woman)	Wise Old Woman#Prontera	78

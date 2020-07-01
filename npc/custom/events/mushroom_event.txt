@@ -14,7 +14,7 @@
 //= 3.6a Slightly edited. [Euphy]
 //============================================================ 
 
-prontera,164,155,6	script	Find The Mushroom	1084,{
+prontera,189,180,6	script	Find The Mushroom	1084,{
 	mes "[ Find The Mushroom ]";
 	if (.status == 1) {
 		.@count = mobcount( .event_map$, strnpcinfo(0) + "::OnMobKilled" );

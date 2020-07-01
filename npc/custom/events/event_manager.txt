@@ -21,14 +21,14 @@
 // You should be able to easily change the rewards
 // If you have basic scripting knowledge
 
-prontera,161,150,2	script	Event Warper	45,2,2,{
+prontera,189,176,5	script	Event Warper	45,2,2,{
 OnTouch:
 	sc_end SC_ALL;
 	percentheal 100,100;
 	warp getvariableofnpc(.map$,"Event Manager"), getvariableofnpc(.x,"Event Manager"), getvariableofnpc(.y,"Event Manager");
 }
 
-prontera,165,150,3	script	Event Manager	718,{
+prontera,186,178,3	script	Event Manager	718,{
 	
 	set .@GMLevel,60;	// GM level required to access NPC.
 	if (getgmlevel()>=.@GMLevel) {
@@ -103,7 +103,7 @@ OnJoinEvent:
 		// ,"Novice v Zombie Event - "+ ((getvariableofnpc(.start,"Event_NvZ") == 1) ? "^0000ffJoin Event":((getvariableofnpc(.start,"Event_NvZ") == 2) ? "^0000ffEvent On-Going":"^ff0000Not Available"))+"^000000"
 		// ,"Poring Hunter Event - "+ ((getvariableofnpc(.start,"Poring_Hunter") == 1) ? "^0000ffJoin Event":((getvariableofnpc(.start,"Poring_Hunter") == 2) ? "^0000ffEvent On-Going":"^ff0000Not Available"))+"^000000" 
 	// )) {
-	warp "prontera",156,150; 
+	warp "prontera",193,176; 
 	switch(.onGoingEvent) {
 		case 1:
 			// .@start = getvariableofnpc(.start,"Event_Bombring");
@@ -171,27 +171,27 @@ OnJoinEvent:
 	end;
 	
 	// OnClock<hour><minute>: donpcevent "<npc_name>::OnStart";
-	OnClock0000: donpcevent "Event_Bombring::OnStart"; .onGoingEvent = 1; end; //----- 12 mn
+	OnClock0005: donpcevent "Event_Bombring::OnStart"; .onGoingEvent = 1; end; //----- 12 mn
 	OnClock0100: donpcevent "Event_Dice::OnStart"; .onGoingEvent = 2; end;
 	OnClock0200: donpcevent "Event_LMS::OnStart"; .onGoingEvent = 3; end;
 	OnClock0300: donpcevent "Poring_Catcher::OnStart"; .onGoingEvent = 4; end;
-	OnClock0400: donpcevent "Cluckers::OnStart"; .onGoingEvent = 5; end;
+	OnClock0405: donpcevent "Cluckers::OnStart"; .onGoingEvent = 5; end;
 	OnClock0500: donpcevent "Find The Mushroom::OnStart"; .onGoingEvent = 6; end;
 	OnClock0600: donpcevent "Event_Bombring::OnStart"; .onGoingEvent = 1; end; //----- 6 am
 	OnClock0700: donpcevent "Event_Dice::OnStart"; .onGoingEvent = 2; end;
-	OnClock0800: donpcevent "Event_LMS::OnStart"; .onGoingEvent = 3; end;
+	OnClock0805: donpcevent "Event_LMS::OnStart"; .onGoingEvent = 3; end;
 	OnClock0900: donpcevent "Poring_Catcher::OnStart"; .onGoingEvent = 4; end;
 	OnClock1000: donpcevent "Cluckers::OnStart"; .onGoingEvent = 5; end;
 	OnClock1100: donpcevent "Find The Mushroom::OnStart"; .onGoingEvent = 6; end;
-	OnClock1200: donpcevent "Event_Bombring::OnStart"; .onGoingEvent = 1; end; //----- 12 nn
+	OnClock1205: donpcevent "Event_Bombring::OnStart"; .onGoingEvent = 1; end; //----- 12 nn
 	OnClock1300: donpcevent "Event_Dice::OnStart"; .onGoingEvent = 2; end;
 	OnClock1400: donpcevent "Event_LMS::OnStart"; .onGoingEvent = 3; end;
 	OnClock1500: donpcevent "Poring_Catcher::OnStart"; .onGoingEvent = 4; end;
-	OnClock1600: donpcevent "Cluckers::OnStart"; .onGoingEvent = 5; end;
+	OnClock1605: donpcevent "Cluckers::OnStart"; .onGoingEvent = 5; end;
 	OnClock1700: donpcevent "Find The Mushroom::OnStart"; .onGoingEvent = 6; end;
 	OnClock1800: donpcevent "Event_Bombring::OnStart"; .onGoingEvent = 1; end; //----- 6 pm
 	OnClock1900: donpcevent "Event_Dice::OnStart"; .onGoingEvent = 2; end;
-	OnClock2000: donpcevent "Event_LMS::OnStart"; .onGoingEvent = 3; end;
+	OnClock2005: donpcevent "Event_LMS::OnStart"; .onGoingEvent = 3; end;
 	OnClock2100: donpcevent "Poring_Catcher::OnStart"; .onGoingEvent = 4; end;
 	OnClock2200: donpcevent "Cluckers::OnStart"; .onGoingEvent = 5; end;
 	OnClock2300: donpcevent "Find The Mushroom::OnStart"; .onGoingEvent = 6; end;//----- 11 pm

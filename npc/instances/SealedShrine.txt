@@ -263,7 +263,7 @@ prt_monk,261,91,3	script	Rust Blackhand#edq	826,{
 		mes "[Rust Blackhand]";
 		mes "Did you bring all of the ingredients?";
 		next;
-		if ((countitem(6004) > 0) && (countitem(2256) > 0) && (countitem(7799) > 29) && (countitem(7798) > 49) && (Zeny > 990000)) {
+		if ((countitem(6004) > 0) && (countitem(2256) > 0) && (countitem(7227) > 49) && (countitem(7799) > 29) && (countitem(7798) > 49) && (Zeny > 990000)) {
 			mes "[Rust Blackhand]";
 			mes "kkk... You prepared the ingredients well. Why don't you leave it there and wait?";
 			next;
@@ -275,14 +275,30 @@ prt_monk,261,91,3	script	Rust Blackhand#edq	826,{
 			mes "... ...";
 			next;
 			mes "... ... ...";
+			mes "Choose what magestic goat you want";
 			next;
-			delitem 6004,1; //Bapho_Doll
-			delitem 2256,1; //Magestic_Goat
-			delitem 7799,30; //Dark_Crystal
-			delitem 7798,50; //Dark_Debris
-			set Zeny, Zeny-990000;
-			completequest 3043;
-			getitem 5374,1; //L_Magestic_Goat
+			switch(select("Baphomet Horns(ATK): Large Baphomet Horns(DEF)")){
+				case 1:
+					delitem 6004,1; //Bapho_Doll
+					delitem 2256,1; //Magestic_Goat
+					delitem 7799,30; //Dark_Crystal
+					delitem 7798,50; //Dark_Debris
+					delitem 7227,50; //Dark_Debris
+					set Zeny, Zeny-990000;
+					completequest 3043;
+					getitem 5374,1; //L_Magestic_Goat
+					break;
+				case 2:
+					delitem 6004,1; //Bapho_Doll
+					delitem 2256,1; //Magestic_Goat
+					delitem 7799,30; //Dark_Crystal
+					delitem 7798,50; //Dark_Debris
+					delitem 7227,50; //Dark_Debris
+					set Zeny, Zeny-990000;
+					completequest 3043;
+					getitem 5518,1; //L_Magestic_Goat
+					break;
+			}
 			mes "[Rust Blackhand]";
 			mes "It's done. You may be excited, of course. I understand...";
 			next;
@@ -298,7 +314,7 @@ prt_monk,261,91,3	script	Rust Blackhand#edq	826,{
 			mes "I'll tell you the ingredients one more time, so please gather them correctly.";
 			next;
 			mes "[Rust Blackhand]";
-			mes "^0000FFCursed Baphomet Doll, Magestic Goat, 30 Crystal of Darkness, 50 Fragment of Darkness^000000, and the most important, production cost is ^0000FF990000^000000 Zeny.";
+			mes "^0000FFCursed Baphomet Doll, Magestic Goat, 30 Crystal of Darkness, 50 Fragment of Darkness, 50 Impulse Trading Cards^000000, and the most important, production cost is ^0000FF990000^000000 Zeny.";
 			close;
 		}
 	}
@@ -329,7 +345,7 @@ prt_monk,261,91,3	script	Rust Blackhand#edq	826,{
 				mes "kkk... Yes, wise men take their chances when the opportunity comes. I'll tell you the ingredients. Don't forget, and bring them all.";
 				next;
 				mes "[Rust Blackhand]";
-				mes "^0000FFCursed Baphomet Doll, Magestic Goat, 30 Crystal of Darkness, 50 Fragment of Darkness^000000, and the most important, production cost is ^0000FF990000^000000 Zeny.";
+				mes "^0000FFCursed Baphomet Doll, Magestic Goat, 30 Crystal of Darkness, 50 Fragment of Darkness, 50 Impulse Trading Cards^000000,  and the most important, production cost is ^0000FF990000^000000 Zeny.";
 				next;
 				mes "[Rust Blackhand]";
 				mes "You can get the Magestic Goat from the weak Baphomet in the Labyrinth Forest. Crystal of Darkness and Fragment of Darkness are from the Incarnation of Morocc.";

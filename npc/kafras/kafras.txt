@@ -653,7 +653,7 @@ splendide,193,153,4	script	Kafra Employee::kaf_spl	4_F_KAFRA2,{
 }
 
 //============================================================
-brasilis,190,224,4	script	Kafra Employee::kaf_veins	4_F_KAFRA2,{
+brasilis,190,224,4	script	Kafra Employee::kaf_veins2	4_F_KAFRA2,{
 	cutin "kafra_01",2;
 	mes "[Kafra Employee]";
 	mes "Welcome to the";

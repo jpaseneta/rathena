@@ -1,0 +1,19 @@
+aldebaran,130,137,3	script	yuriah	485,{
+	mes "[yuriah]";
+	mes "Noob..";
+	close;
+	}
+
+aldebaran,130,144,3	script	Carl Oliver	572,{
+	mes "[Carl]";
+	mes "Bobo! Weak!";
+	close;
+}
+
+aldebaran,130,141,3	script	[Shura]	689,{
+	mes "[[Shura]]";
+	mes "Luhod sa Munggo!";
+	close;
+}
+
+
